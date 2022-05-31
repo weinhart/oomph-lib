@@ -1239,7 +1239,7 @@ namespace oomph
           memory_usage_for_jacobian + memory_usage_for_lu_storage;
 
         // How much memory have we used in the subsidiary preconditioners?
-        oomph_info << "\nMemory statistics:"
+        if (Doc_time) oomph_info << "\nMemory statistics:"
                    << "\n - Memory used to store the Jacobian (MB)   : "
                    << memory_usage_for_jacobian / 1.0e+06
                    << "\n - Memory used to store the LU factors (MB) : "
@@ -1718,7 +1718,7 @@ namespace oomph
           memory_usage_for_jacobian + memory_usage_for_lu_storage;
 
         // How much memory have we used in the subsidiary preconditioners?
-        oomph_info << "\nMemory statistics:"
+        if (Doc_time) oomph_info << "\nMemory statistics:"
                    << "\n - Memory used to store the Jacobian (MB): "
                    << memory_usage_for_jacobian / 1.0e+06
                    << "\n - Memory used to store the LU factors (MB): "
